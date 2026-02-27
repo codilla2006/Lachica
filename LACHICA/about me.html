@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>About Me - Portfolio</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #d8f3dc, #b7e4c7);
+            color: #1b4332;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            padding: 20px;
+            background: rgba(255,255,255,0.4);
+            backdrop-filter: blur(10px);
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #1b4332;
+            font-weight: 600;
+            position: relative;
+            transition: 0.3s;
+        }
+
+        nav a::after {
+            content: "";
+            width: 0%;
+            height: 2px;
+            background: #40916c;
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+            transition: 0.3s;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        .about-section {
+            flex: 1;
+            padding: 60px 10%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 40px;
+        }
+
+        .profile-card {
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(15px);
+            padding: 40px;
+            border-radius: 20px;
+            text-align: center;
+            width: 300px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        .profile-card img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #52b788;
+            margin-bottom: 20px;
+        }
+
+        .profile-card h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .profile-card h2 {
+            font-size: 18px;
+            color: #40916c;
+            margin-bottom: 15px;
+        }
+
+        .profile-card p {
+            color: #344e41;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .skills-card {
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(15px);
+            padding: 40px;
+            border-radius: 20px;
+            width: 300px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        .skills-card h2 {
+            margin-bottom: 20px;
+            color: #40916c;
+            text-align: center;
+        }
+
+        .skills-card ul {
+            list-style: none;
+            text-align: left;
+        }
+
+        .skills-card ul li {
+            background: #52b788;
+            color: white;
+            padding: 8px 12px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            display: inline-block;
+        }
+
+        @media(max-width: 700px) {
+            .about-section {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <a href="home.html">Home</a>
+        <a href="about me.html">About Me</a>
+        <a href="project.html">Projects</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <section class="about-section">
+
+        <div class="profile-card">
+            <img src="me.jpeg" alt="My Photo">
+            <h1>Remart Lachica</h1>
+            <h2>BSCS2C</h2>
+            <p>I am a curious and motivated individual who loves learning new things every day.
+I enjoy exploring creative outlets, whether through writing, art, or problem-solving. Connecting with people and understanding different perspectives is something I value deeply. I am passionate about setting goals and working consistently to achieve them.
+In my free time, I like to read, travel, and discover new experiences that broaden my horizons..</p>
+        </div>
+
+        <div class="skills-card">
+            <h2>My Skills</h2>
+            <ul>
+                <li>DANCING</li>
+                <li>SINGING</li>
+                <li>PAGEANT</li>
+                <li>EATING</li>
+                <li>TRAVELING</li>
+            </ul>
+        </div>
+
+    </section>
+
+</body>
+</html>

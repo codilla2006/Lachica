@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Portfolio - Home</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #d8f3dc, #b7e4c7);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            padding: 20px;
+            background: rgba(255,255,255,0.4);
+            backdrop-filter: blur(10px);
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #1b4332;
+            font-weight: 600;
+            position: relative;
+            transition: 0.3s;
+        }
+
+        nav a::after {
+            content: "";
+            width: 0%;
+            height: 2px;
+            background: light green;
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+            transition: 0.3s;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        .hero {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(15px);
+            padding: 50px;
+            border-radius: 20px;
+            text-align: center;
+            width: 400px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            animation: fadeIn 1.5s ease;
+        }
+
+        .profile-pic {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #52b788;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 28px;
+            margin-bottom: 10px;
+            color: #1b4332;
+        }
+
+        h2 {
+            font-size: 18px;
+            color: #40916c;
+            margin-bottom: 20px;
+        }
+
+        p {
+            margin-bottom: 25px;
+            color: #344e41;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 25px;
+            background: #52b788;
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #2d6a4f;
+            transform: scale(1.05);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 500px) {
+            .card {
+                width: 100%;
+                padding: 30px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <a href="home.html">Home</a>
+        <a href="about me.html">About Me</a>
+        <a href="project.html">Project</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <section class="hero">
+        <div class="card">
+            <img src="solo.jpeg" alt="My Photo" class="profile-pic">
+            <h1>Hello, I'm Remart Lachica</h1>
+            <h2>BSCS2C</h2>
+            <p>Take a look my portfolio!.</p>
+        </div>
+    </section>
+
+</body>
+</html>

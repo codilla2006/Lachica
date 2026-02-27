@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Portfolio - Projects</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #d8f3dc, #b7e4c7);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            padding: 20px;
+            background: rgba(255,255,255,0.4);
+            backdrop-filter: blur(10px);
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #1b4332;
+            font-weight: 600;
+            position: relative;
+            transition: 0.3s;
+        }
+
+        nav a::after {
+            content: "";
+            width: 0%;
+            height: 2px;
+            background: #40916c;
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+            transition: 0.3s;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        .projects-section {
+            padding: 60px 10%;
+            flex: 1;
+        }
+
+        .projects-section h1 {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #1b4332;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .project-card {
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(15px);
+            padding: 25px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .project-card img {
+            width: 50%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 15px;
+            margin-bottom: 15px;
+        }
+
+        .project-card h3 {
+            color: #40916c;
+            margin-bottom: 10px;
+        }
+
+        .project-card p {
+            color: #344e41;
+            margin-bottom: 15px;
+        }
+
+        .project-card a {
+            display: inline-block;
+            text-decoration: none;
+            padding: 10px 20px;
+            background: #52b788;
+            color: white;
+            border-radius: 20px;
+            transition: 0.3s;
+        }
+
+        .project-card a:hover {
+            background: #2d6a4f;
+        }
+
+        @media(max-width: 500px) {
+            .projects-section {
+                padding: 40px 5%;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <a href="home.html">Home</a>
+        <a href="about me.html">About Me</a>
+        <a href="project.html">Project</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <section class="projects-section">
+        <h1>My Projects</h1>
+        <div class="projects-grid">
+
+            <div class="project-card">
+                <img src="robot.jpeg" alt="Project">
+                <h3>Project One</h3>
+                <p>A robot car is a vehicle that moves and drives itself without a human controlling it. It uses sensors to see the environment and software to make decisions. Robot cars can be used for self-driving cars, deliveries, or racing. They rely on AI, computer vision, and path planning to navigate safely. Essentially, a robot car is a smart vehicle that drives itself..</p>
+            </div>
+            <!-- Add more project cards as needed -->
+
+        </div>
+    </section>
+
+</body>
+</html>

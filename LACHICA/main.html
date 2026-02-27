@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Portfolio - Main</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #d8f3dc, #b7e4c7);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            color: #1b4332;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            padding: 20px;
+            background: rgba(255,255,255,0.4);
+            backdrop-filter: blur(10px);
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #1b4332;
+            font-weight: 600;
+            position: relative;
+            transition: 0.3s;
+        }
+
+        nav a::after {
+            content: "";
+            width: 0%;
+            height: 2px;
+            background: #40916c;
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+            transition: 0.3s;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        .hero {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 60px 20px;
+            animation: fadeIn 1.5s ease;
+        }
+
+        .hero img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            border: 5px solid #52b788;
+            margin-bottom: 20px;
+            object-fit: cover;
+            box-shadow: 0 0 25px rgba(82, 183, 136, 0.6);
+        }
+
+        .hero h1 {
+            font-size: 36px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            color: #344e41;
+        }
+
+        .links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 25px;
+        }
+
+        .links a {
+            display: inline-block;
+            text-decoration: none;
+            padding: 15px 35px;
+            background: #52b788;
+            color: white;
+            border-radius: 25px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .links a:hover {
+            background: #2d6a4f;
+            transform: scale(1.05);
+        }
+
+        @keyframes fadeIn {
+            from {opacity: 0; transform: translateY(20px);}
+            to {opacity: 1; transform: translateY(0);}
+        }
+
+        @media(max-width: 500px) {
+            .hero h1 {
+                font-size: 28px;
+            }
+
+            .links a {
+                padding: 12px 25px;
+            }
+
+            .hero img {
+                width: 140px;
+                height: 140px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    <section class="hero">
+        <!-- Replace 'selfie.jpeg' with your actual image file -->
+        <img src="selfie.jpeg" alt="selfie">
+
+        <h1>Welcome to My Portfolio</h1>
+        <p>Explore my work, learn more about me, and get in touch!</p>
+
+        <div class="links">
+            <a href="home.html">Home</a>
+            <a href="about me.html">About Me</a>
+            <a href="project.html">Projects</a>
+            <a href="contacts.html">Contact</a>
+        </div>
+    </section>
+
+</body>
+</html>
